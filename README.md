@@ -2,11 +2,15 @@
 
 ## Start
 
-node server.js
+node src/server.js or npm start
+
+## GraphiQl
+http://localhost:4000/graphql
 
 ## Make request
 
 ### GraphiQl
+Few examples of requests.
 ```
 { 
     rollDice(numDice: 3, numSides: 6)
@@ -34,7 +38,21 @@ mutation {
   }
 }
 ```
+Mutation example
+
+```
+mutation {
+  createMessage(input: {
+    author: "andy",
+    content: "hope is a good thing",
+  }) {
+    id
+  }
+}
+```
+
 ### Console
+Few examples of requests.
 ```
 fetch(
 '/graphql', 
@@ -57,16 +75,6 @@ fetch(
 
 Mutation example
 
-```
-mutation {
-  createMessage(input: {
-    author: "andy",
-    content: "hope is a good thing",
-  }) {
-    id
-  }
-}
-```
 
 ```
 var author = 'andy';

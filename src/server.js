@@ -1,8 +1,8 @@
 var express = require('express');
 var {graphqlHTTP} = require('express-graphql');
 var {buildSchema} = require('graphql');
-const RandomDie = require("./RandomDieClass");
-const Message = require("./MessageClass");
+const RandomDie = require("./classes/RandomDieClass");
+const Message = require("./classes/MessageClass");
 
 // Maps username to content
 var fakeDatabase = {};
